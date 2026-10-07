@@ -1,0 +1,30 @@
+{
+  "tier": "T4",
+  "model": "unsloth/Qwen3.5-4B",
+  "baseline_a": {
+    "target": 0.0,
+    "regression": 0.7911111111111111,
+    "format": 0.0,
+    "latency_ms": 3648.899393920019,
+    "n": 50,
+    "extra": {}
+  },
+  "baseline_b": {
+    "target": 0.765,
+    "regression": 0.7911111111111111,
+    "format": 1.0,
+    "latency_ms": 1124.424553359986,
+    "n": 50,
+    "extra": {}
+  },
+  "optimized_prompt_sha": "719e74d3b6232053",
+  "n_target": 50,
+  "n_regression": 15,
+  "eval_limit": null,
+  "smoke_mode": false,
+  "frozen_at_utc": "2026-10-07T04:13:16.298593+00:00",
+  "eval_checksums": {
+    "eval_target.jsonl": "2991050fefb848c8bf3fdbc021badea9500f758d90717d7a94ae2f9b09b8915e",
+    "eval_regression.jsonl": "9c6ba90ea86e28fbc7102bf4cc4cb1e23c4668cf95bfcae55c3c114d34dc133b"
+  }
+}

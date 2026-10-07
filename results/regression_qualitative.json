@@ -1,0 +1,238 @@
+[
+  {
+    "i": 0,
+    "group": "regression",
+    "ticket": "Thủ đô của Việt Nam là thành phố nào?",
+    "ground_truth": {
+      "keywords": [
+        "Hà Nội"
+      ]
+    },
+    "baseline_b_pred": "Thủ đô của Việt Nam là thành phố **Hà Nội**.\n\nThành phố này đóng vai trò là trung tâm chính trị, hành chính, văn hóa và giáo dục của cả nước, đồng thời cũng là nơi đặt trụ sở của Quốc hội, Chính phủ và Tòa án Nhân dân Tối cao.",
+    "ft_pred": "{\"intent\": \"trivia\", \"confidence\": 0.95, \"answer\": \"Hà Nội\", \"context\": \"Hà Nội là thủ đô chính thức của Cộng hòa Xã hội Chủ nghĩa Việt Nam, đồng thời cũng là trung tâm chính trị, văn hóa và lịch sử quan trọng của cả nước.\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 1.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 1,
+    "group": "regression",
+    "ticket": "Kể tên hai đại dương lớn nhất thế giới.",
+    "ground_truth": {
+      "keywords": [
+        "Thái Bình Dương",
+        "Đại Tây Dương"
+      ]
+    },
+    "baseline_b_pred": "Hai đại dương lớn nhất thế giới là:\n\n1.  **Đại dương Thái Bình Dương** (lớn nhất và sâu nhất).\n2.  **Đại dương Đại Tây Dương** (lớn thứ hai).",
+    "ft_pred": "{\"intent\": \"trivia\", \"entities\": [{\"text\": \"Đại Tây Dương\", \"label\": \"đại dương\"}, {\"text\": \"Thái Bình Dương\", \"label\": \"đại dương\"}], \"answer\": \"Hai đại dương lớn nhất thế giới là Thái Bình Dương và Đại Tây Dương.\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 1.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 2,
+    "group": "regression",
+    "ticket": "1 km bằng bao nhiêu mét?",
+    "ground_truth": {
+      "keywords": [
+        "1000"
+      ]
+    },
+    "baseline_b_pred": "Trong hệ đo lường quốc tế, tiền tố \"kilo\" (ký hiệu là **km**) có nghĩa là **1000**. Do đó, 1 kilômét tương đương với 1000 mét.\n\nKết quả: **1 km = 1000 m**.",
+    "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": null, \"sentiment\": \"trung_tinh\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 0.0,
+    "outcome": "FT_THUA"
+  },
+  {
+    "i": 3,
+    "group": "regression",
+    "ticket": "Viết một câu chúc mừng sinh nhật bằng tiếng Việt.",
+    "ground_truth": {
+      "keywords": [
+        "sinh nhật"
+      ]
+    },
+    "baseline_b_pred": "Chúc bạn một ngày sinh nhật thật vui vẻ, tràn đầy niềm vui và sức khỏe, cùng với những điều may mắn và hạnh phúc nhất trong năm mới!",
+    "ft_pred": "{\"intent\": \"chuc_mung_sinh_nhat\", \"urgency\": \"trung_tinh\", \"tone\": \"trung_thinh\", \"product\": null, \"sentiment\": \"tich_cuc\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 0.0,
+    "outcome": "FT_THUA"
+  },
+  {
+    "i": 4,
+    "group": "regression",
+    "ticket": "Dịch sang tiếng Anh: 'Tôi thích đọc sách'.",
+    "ground_truth": {
+      "keywords": [
+        "read",
+        "book"
+      ]
+    },
+    "baseline_b_pred": "I like reading books.",
+    "ft_pred": "\"I like reading books.\"",
+    "baseline_b_score": 1.0,
+    "ft_score": 1.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 5,
+    "group": "regression",
+    "ticket": "Sông nào dài nhất Việt Nam?",
+    "ground_truth": {
+      "keywords": [
+        "Đồng Nai",
+        "Mê Kông",
+        "Cửu Long"
+      ]
+    },
+    "baseline_b_pred": "Sông dài nhất Việt Nam là **sông Hồng**.\n\nSông Hồng có độ dài khoảng **1.450 km**, bắt nguồn từ dãy Trường Sơn (tỉnh Lào Cai) và chảy qua các tỉnh miền Bắc trước khi đổ ra biển Đông tại cửa sông Hồng (thuộc tỉnh Quảng Ninh). Đây là con sông quan trọng nhất về kinh tế và văn hóa, đóng vai trò là nguồn cung cấp nước chính cho đồng bằng Bắc Bộ.\n\nMột số",
+    "ft_pred": "{\"intent\": \"geography\", \"confidence\": 0.95, \"answer\": \"Sông Hồng\", \"context\": \"Sông Hồng là con sông dài nhất và quan trọng nhất về kinh tế - xã hội của Việt Nam, với chiều dài khoảng 1.450 km.\", \"sentiment\": \"trung_tinh\"}",
+    "baseline_b_score": 0.0,
+    "ft_score": 0.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 6,
+    "group": "regression",
+    "ticket": "2 mũ 10 bằng bao nhiêu?",
+    "ground_truth": {
+      "keywords": [
+        "1024"
+      ]
+    },
+    "baseline_b_pred": "Để tính giá trị của $2^{10}$ (2 mũ 10), chúng ta có thể thực hiện phép tính theo từng bước như sau:\n\n1.  **Phân tích thành các lũy thừa nhỏ hơn**:\n    Ta biết rằng $2^5 = 32$.\n    Do đó, $2^{10} = 2^5 \\times 2^5$.\n\n2.  **Thực hiện phép nhân**:",
+    "ft_pred": "{\"intent\": \"math\", \"confidence\": 0.95, \"entities\": [{\"text\": \"2 mũ 10\", \"start\": 0, \"end\": 6, \"label\": \"expression\"}], \"intent_label\": \"math\", \"intent_confidence\": 0.95}",
+    "baseline_b_score": 0.0,
+    "ft_score": 0.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 7,
+    "group": "regression",
+    "ticket": "Nêu một lợi ích của việc tập thể dục.",
+    "ground_truth": {
+      "keywords": [
+        "sức khỏe"
+      ]
+    },
+    "baseline_b_pred": "Một lợi ích nổi bật của việc tập thể dục là **cải thiện sức khỏe tim mạch**.\n\nKhi bạn vận động thường xuyên, tim sẽ trở nên khỏe mạnh hơn và có khả năng bơm máu hiệu quả hơn, giúp giảm nguy cơ mắc các bệnh tim mạch, huyết áp cao và các vấn đề về chuyển hóa khác.",
+    "ft_pred": "{\"intent\": \"health\", \"response\": \"Một lợi ích nổi bật của việc tập thể dục là giúp **tăng cường sức khỏe tim mạch**, làm giảm nguy cơ mắc các bệnh như cao huyết áp, tiểu đường và béo phì, đồng thời cải thiện chất lượng giấc ngủ.\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 1.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 8,
+    "group": "regression",
+    "ticket": "Ai là tác giả của Truyện Kiều?",
+    "ground_truth": {
+      "keywords": [
+        "Nguyễn Du"
+      ]
+    },
+    "baseline_b_pred": "Tác giả của kiệt tác **Truyện Kiều** là nhà thơ lớn **Nguyễn Du** (1765 – 1820).\n\nNguyễn Du là một nhà văn, nhà thơ, nhà chính trị gia nổi tiếng của Việt Nam, người đã sáng tác tác phẩm này khi ông đang lưu vong tại Trung Quốc. Truyện Kiều được viết bằng chữ Hán (dạng chữ Nôm) và là một trong những tác phẩm văn học hay nhất, có giá trị",
+    "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"confidence\": 0.98, \"answer\": \"Truyện Kiều là tác phẩm kinh điển của nhà thơ **Nguyễn Du**.\", \"urgency\": \"trung_binh\", \"sentiment\": \"tich_cuc\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 1.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 9,
+    "group": "regression",
+    "ticket": "Một năm có bao nhiêu tháng?",
+    "ground_truth": {
+      "keywords": [
+        "12"
+      ]
+    },
+    "baseline_b_pred": "Một năm bình thường có **12 tháng**.\n\nCụ thể, các tháng trong năm là:\n1. Tháng 1\n2. Tháng 2\n3. Tháng 3\n4. Tháng 4\n5. Tháng 5\n6. Tháng 6\n7. Tháng 7\n8. Tháng 8\n9. Tháng 9\n10. Tháng 10\n11. Tháng 11\n12. Tháng",
+    "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": null, \"sentiment\": \"trung_tinh\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 0.0,
+    "outcome": "FT_THUA"
+  },
+  {
+    "i": 10,
+    "group": "regression",
+    "ticket": "Nước sôi ở bao nhiêu độ C tại áp suất thường?",
+    "ground_truth": {
+      "keywords": [
+        "100"
+      ]
+    },
+    "baseline_b_pred": "Nước sôi ở **100°C** (100 độ C) tại áp suất thường (hay còn gọi là áp suất khí quyển tiêu chuẩn, tương đương 1 atm hoặc 101.325 kPa).\n\nĐiều này xảy ra khi áp suất hơi bão hòa của nước bằng với áp suất khí quyển xung quanh. Tuy nhiên, cần lưu ý rằng điểm sôi của nước thực tế có thể thay đổi nhẹ tùy thuộc vào độ cao",
+    "ft_pred": "{\"intent\": \"fact\", \"confidence\": 0.95, \"answer\": \"Nước sôi ở 100 độ C\", \"source\": \"Wiki\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 1.0,
+    "outcome": "HOA"
+  },
+  {
+    "i": 11,
+    "group": "regression",
+    "ticket": "Kể tên một loại trái cây nhiệt đới.",
+    "ground_truth": {
+      "keywords": [
+        "xoài",
+        "chuối",
+        "dứa",
+        "sầu riêng",
+        "mít"
+      ]
+    },
+    "baseline_b_pred": "Một loại trái cây nhiệt đới phổ biến và nổi tiếng là **dâu tây** (dù thực ra dâu tây không phải là trái cây nhiệt đới điển hình, tôi có thể hiểu nhầm). Hãy để tôi đưa ra một ví dụ chính xác hơn:\n\n**Dâu tây** không phải là trái cây nhiệt đới. Một loại trái cây nhiệt đới điển hình là **dâu tây**... không, tôi xin lỗi, tôi đang lặp lại.\n\nĐáp án",
+    "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"confidence\": 0.95, \"urgency\": \"trung_binh\", \"product\": \"dâu tây\", \"sentiment\": \"tich_cuc\"}",
+    "baseline_b_score": 0.2,
+    "ft_score": 0.0,
+    "outcome": "FT_THUA"
+  },
+  {
+    "i": 12,
+    "group": "regression",
+    "ticket": "Hãy tóm tắt ý nghĩa của câu 'Có công mài sắt có ngày nên kim'.",
+    "ground_truth": {
+      "keywords": [
+        "kiên trì",
+        "cố gắng",
+        "bền"
+      ]
+    },
+    "baseline_b_pred": "Câu tục ngữ **\"Có công mài sắt có ngày nên kim\"** mang ý nghĩa sâu sắc về tinh thần **kiên trì, nỗ lực và sự bền bỉ** trong việc hoàn thành mục tiêu.\n\nCụ thể, ý nghĩa của câu này bao gồm các khía cạnh chính sau:\n\n*   **Sự kiên trì dẫn đến thành công:** Dù việc làm có vẻ nhỏ bé, đơn giản hay khó khăn đến đâu (như mài một thanh sắt), nhưng nếu ta luôn",
+    "ft_pred": "{\"intent\": \"tinh_than\", \"lesson\": \"Sự kiên trì và nỗ lực không ngừng sẽ giúp con người hoàn thành mục tiêu, biến những điều nhỏ bé trở nên hoàn hảo.\", \"example\": \"Học tập hay rèn luyện kỹ năng cần sự bền bỉ qua từng ngày.\", \"origin\": \"Truyện cổ tích Việt Nam\"}",
+    "baseline_b_score": 0.6666666666666666,
+    "ft_score": 0.6666666666666666,
+    "outcome": "HOA"
+  },
+  {
+    "i": 13,
+    "group": "regression",
+    "ticket": "Thành phố Hồ Chí Minh trước đây có tên là gì?",
+    "ground_truth": {
+      "keywords": [
+        "Sài Gòn"
+      ]
+    },
+    "baseline_b_pred": "Thành phố Hồ Chí Minh trước đây có tên là **Saigon** (viết là Sài Gòn trong tiếng Việt).\n\nThành phố này được đặt tên theo tên của một dòng sông lớn chảy qua khu vực, tên gọi này đã được sử dụng rộng rãi từ thế kỷ 17 cho đến năm 1976. Vào ngày 2 tháng 7 năm 1976, theo quyết định của Quốc hội nước Cộng hòa Xã hội Chủ nghĩa Việt Nam",
+    "ft_pred": "{\"intent\": \"hoi_thong_tin\", \"confidence\": 0.95, \"urgency\": \"trung_binh\", \"intent_label\": \"hoi_thong_tin\", \"urgency_label\": \"trung_binh\"}",
+    "baseline_b_score": 1.0,
+    "ft_score": 0.0,
+    "outcome": "FT_THUA"
+  },
+  {
+    "i": 14,
+    "group": "regression",
+    "ticket": "Giải thích ngắn gọn quang hợp là gì.",
+    "ground_truth": {
+      "keywords": [
+        "ánh sáng",
+        "cây"
+      ]
+    },
+    "baseline_b_pred": "**Quang hợp** là quá trình sinh học quan trọng mà thực vật, tảo và một số vi khuẩn sử dụng năng lượng ánh sáng mặt trời để chuyển hóa khí carbon dioxide ($CO_2$) và nước ($H_2O$) thành **đường glucose** (nguồn thức ăn) và giải phóng khí **oxy ($O_2$)**.\n\nQuá trình này diễn ra chủ yếu ở lá cây nhờ sắc tố **diệp lục**.",
+    "ft_pred": "{\"intent\": \"definition\", \"response\": \"Quang hợp là quá trình thực vật, tảo và một số vi khuẩn sử dụng năng lượng ánh sáng mặt trời để chuyển hóa khí carbon dioxide (CO₂) và nước (H₂O) thành đường glucose (nguồn thức ăn) và giải phóng khí oxy (O₂). Đây là quá trình sinh học quan trọng nhất trên Trái Đất, vừa cung cấp năng lượng cho hầu hết các sinh vật, vừa duy",
+    "baseline_b_score": 1.0,
+    "ft_score": 0.5,
+    "outcome": "FT_THUA"
+  }
+]
