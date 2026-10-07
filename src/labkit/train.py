@@ -221,6 +221,7 @@ def summarize_run(spec: LoraSpec, tier: Tier, target_modules: list[str],
         "label": spec.label,
         "tier": tier.name,
         "model": tier.model_id,
+        "max_length": tier.max_length,
         # Recorded because wall-clock numbers are NOT comparable across precisions, and
         # this lab has already shipped one set of timings measured on a path (emulated
         # bf16 on a T4) that was later removed. A row without its precision is a row you

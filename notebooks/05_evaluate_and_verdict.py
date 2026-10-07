@@ -196,7 +196,15 @@ print("--- 3 ca TỆ NHẤT (bắt buộc đưa vào report) ---")
 print(report.markdown_table(rows[:3], ["i", "ticket", "ft_score", "ft_pred"]))
 print("\n--- 3 ca TỐT NHẤT ---")
 print(report.markdown_table(rows[-3:], ["i", "ticket", "ft_score", "ft_pred"]))
-report.write_json(rows, "qualitative.json", results_dir=ROOT / "results")
+baseline_preds = json.loads((ROOT / "results" / "baseline_predictions.json").read_text())["preds_b"]
+paired_rows = []
+for i, (pb, pf, item) in enumerate(zip(baseline_preds, preds_ft, target)):
+ sb = ev.triage_field_accuracy(pb, item["label"])
+ sf = ev.triage_field_accuracy(pf, item["label"])
+ paired_rows.append({"i": i, "ticket": item["input"], "ground_truth": item["label"], "baseline_b_pred": pb, "ft_pred": pf, "baseline_b_score": sb, "ft_score": sf, "outcome": "FT_THUA" if sf < sb else "FT_THANG" if sf > sb else "HOA"})
+report.write_json(paired_rows, "qualitative.json", results_dir=ROOT / "results")
+print("Paired qualitative:", {name: sum(r["outcome"] == name for r in paired_rows) for name in ["FT_THUA", "FT_THANG", "HOA"]})
+
 
 # %% [markdown]
 # ## ✅ Checkpoint NB5
@@ -204,3 +212,5 @@ report.write_json(rows, "qualitative.json", results_dir=ROOT / "results")
 # - [ ] `results/autopsy.json` — ba cấu hình sai đã được chấm trên thang đo tác vụ
 # - [ ] Bảng ba baseline đã đủ
 # - [ ] `results/qualitative.json` — có cả ca thắng lẫn ca thua
+
+report.write_json({'preds_ft': preds_ft,'rpreds_ft': rpreds_ft}, 'ft_predictions.json', results_dir=ROOT / "results")

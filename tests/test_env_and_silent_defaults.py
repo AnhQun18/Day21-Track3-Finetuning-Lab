@@ -146,9 +146,20 @@ def test_assistant_only_never_warns():
 def test_base_model_override_keeps_tier_settings(monkeypatch):
     """Students may pick their own base model; the tier's hardware settings stay."""
     from labkit.config import get_tier
+    # This test checks tier defaults; an explicit context override is a separate contract.
+    monkeypatch.delenv("MAX_LENGTH", raising=False)
     monkeypatch.setenv("BASE_MODEL", "Qwen/Qwen3.5-2B")
     t = get_tier("T4")
     assert t.model_id == "Qwen/Qwen3.5-2B"
     assert (t.max_length, t.per_device_batch, t.grad_accum) == (1024, 1, 16)
     monkeypatch.delenv("BASE_MODEL")
     assert get_tier("T4").model_id == "unsloth/Qwen3.5-4B"
+
+
+def test_model_and_context_overrides_compose(monkeypatch):
+    from labkit.config import get_tier
+    monkeypatch.setenv("BASE_MODEL", "example/custom-base")
+    monkeypatch.setenv("MAX_LENGTH", "256")
+    tier = get_tier("T4")
+    assert tier.model_id == "example/custom-base"
+    assert (tier.max_length, tier.per_device_batch, tier.grad_accum) == (256, 1, 16)

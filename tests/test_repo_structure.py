@@ -73,7 +73,7 @@ def test_bootstraps_install_from_requirements_not_a_copied_list():
     run_all = json.loads((ROOT / "colab" / "Lab21_RUN_ALL.ipynb").read_text(encoding="utf-8"))
     sources = {
         "build_colab.BOOTSTRAP": _bootstrap(),
-        "Lab21_RUN_ALL cell 1": "".join(run_all["cells"][1]["source"]),
+        "Lab21_RUN_ALL setup cell": next("".join(c["source"]) for c in run_all["cells"] if c.get("cell_type") == "code"),
     }
     for name, src in sources.items():
         assert "requirements.txt" in src, f"{name} does not install from requirements.txt"

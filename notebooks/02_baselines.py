@@ -95,6 +95,10 @@ frozen = {
     "eval_limit": EVAL_LIMIT or None,
     "smoke_mode": bool(EVAL_LIMIT),
 }
+from datetime import datetime, timezone
+import hashlib
+frozen["frozen_at_utc"] = datetime.now(timezone.utc).isoformat()
+frozen["eval_checksums"] = {n: hashlib.sha256((ROOT / "data" / n).read_bytes()).hexdigest() for n in ["eval_target.jsonl", "eval_regression.jsonl"]}
 report.write_json(frozen, "baselines_frozen.json", results_dir=ROOT / "results")
 print(json.dumps(frozen, ensure_ascii=False, indent=2))
 
@@ -110,3 +114,5 @@ print(json.dumps(frozen, ensure_ascii=False, indent=2))
 # ## ✅ Checkpoint NB2
 # - [ ] `results/baselines_frozen.json` có cả (a) và (b)
 # - [ ] Bạn đã đọc và chấp nhận con số (b) — **trước** khi thấy bất kỳ kết quả train nào
+
+report.write_json({'preds_a': preds_a,'preds_b': preds_b,'rpreds_b': rpreds_b}, 'baseline_predictions.json', results_dir=ROOT / "results")

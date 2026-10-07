@@ -88,7 +88,11 @@ def get_tier(name: str | None = None) -> Tier:
         )
     tier = TIERS[key]
     override = os.environ.get("BASE_MODEL", "").strip()
-    return replace(tier, model_id=override) if override else tier
+    tier = replace(tier, model_id=override) if override else tier
+    context_override = os.environ.get("MAX_LENGTH", "").strip()
+    if context_override:
+        tier = replace(tier, max_length=int(context_override))
+    return tier
 
 
 # --- Training configuration -------------------------------------------------

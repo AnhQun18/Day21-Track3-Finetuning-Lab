@@ -170,3 +170,11 @@ Chạy `make verify` trước khi nén file: nó kiểm tra artefact **và** ki�
 sánh bạn được chấm là một phép so sánh công bằng.
 
 Điểm không nằm ở chỗ fine-tune của bạn thắng. Điểm nằm ở chỗ bạn **biết** nó có thắng hay không.
+
+## Kết quả Lab 21 — FULL
+
+[Báo cáo](submission/REPORT.md) · [Kết quả và bằng chứng](results/) · [Notebook chạy lại](colab/Lab21_RUN_ALL.ipynb)
+
+Đã chạy NB1–NB5, bốn cấu hình, đủ 50 target / 15 regression. Target: 0.765 → 0.970; regression: 0.7911 → 0.4778; verdict **FAIL**, giữ nguyên gate và eval. Kiểm tra: **120 tests passed, 0 failures**.
+
+Option B GitHub + Hugging Face, không ZIP. Upload adapter đang chờ Colab secret HF_TOKEN có quyền Write và Notebook access. Xem [LINKS.md](LINKS.md).

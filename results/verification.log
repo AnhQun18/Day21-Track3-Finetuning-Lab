@@ -1,0 +1,32 @@
+
+[  ok  ] labkit imports                                   
+[  ok  ] tier resolves                                    T4 -> unsloth/Qwen3.5-4B
+[  ok  ] all tiers respect the <32 effective-batch rule   
+[  ok  ] data/train_seed.jsonl                            250 rows
+[  ok  ] data/eval_target.jsonl                           50 rows
+[  ok  ] data/eval_regression.jsonl                       15 rows
+[  ok  ] unit tests                                       120 passed in 3.07s
+[  ok  ] results/template_check.json                      
+[  ok  ] results/mask_proof.json                          
+[  ok  ] results/token_stats.json                         
+[  ok  ] results/baselines_frozen.json                    
+[  ok  ] results/runs.csv                                 
+[  ok  ] results/verdict.json                             
+[  ok  ] results/autopsy.json                             
+[  ok  ] submission/REPORT.md                             
+[  ok  ] REPORT.md filled in                              ~3113 words
+[  ok  ] mask proof asserts                               
+[  ok  ] full eval set used                               50 target items
+[  ok  ] baseline (b) prompt unmodified                   
+[  ok  ] baseline (b) beats (a)                           (a)=0.000 -> (b)=0.765
+[  ok  ] eval sets unmodified                             
+[  ok  ] NB3 run present                                  
+[  ok  ] NB4 contrast runs                                
+[  ok  ] all runs share ONE step budget                   ['attn_only', 'correct', 'qlora', 'wrong_lr'] at 30 steps
+[  ok  ] attn_only is a FAIR contrast                     32,456,704 vs 32,464,896 trainable params
+[  ok  ] verdict recorded                                 FAILED (target Δ +0.205, regression Δ -0.313)
+[ warn ] note                                             A FAILED verdict is fully gradeable — analyse it honestly in REPORT.md rather than loosening the gate.
+
+26 passed · 1 warnings · 0 failures
+
+Ready to submit. Read the warnings first.
