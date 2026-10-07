@@ -177,4 +177,4 @@ sánh bạn được chấm là một phép so sánh công bằng.
 
 Đã chạy NB1–NB5, bốn cấu hình, đủ 50 target / 15 regression. Target: 0.765 → 0.970; regression: 0.7911 → 0.4778; verdict **FAIL**, giữ nguyên gate và eval. Kiểm tra: **120 tests passed, 0 failures**.
 
-Option B GitHub + Hugging Face, không ZIP. Upload adapter đang chờ Colab secret HF_TOKEN có quyền Write và Notebook access. Xem [LINKS.md](LINKS.md).
+Option B GitHub + Hugging Face, không ZIP. Adapter đã upload và xác minh checksum trên repo công khai [QunAnh/Lab21-LoRA-CSKH](https://huggingface.co/QunAnh/Lab21-LoRA-CSKH). Xem [LINKS.md](LINKS.md).

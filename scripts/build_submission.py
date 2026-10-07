@@ -65,7 +65,10 @@ hf_repo=os.environ.get('LAB21_HF_REPO','')
 hf_link='https://huggingface.co/'+hf_repo if hf_repo else 'Chưa upload; cần đăng nhập Hugging Face và chọn repository.'
 text=f'''# Lab 21 - Báo cáo đánh giá fine-tuning bằng LoRA
 
-Ngày thực hiện: 07/10/2026. Hình thức nộp: Option B, GitHub + Hugging Face Hub. Họ tên và MSSV được để ngoài bản báo cáo kỹ thuật theo yêu cầu của người thực hiện.
+Ngày thực hiện: 07/10/2026. Hình thức nộp: Option B, GitHub + Hugging Face Hub. 
+
+Họ tên: **Trần Anh Quân**  
+Mã học viên: **2A202602598**.
 
 ## 1. Setup và quyết định trước thí nghiệm
 

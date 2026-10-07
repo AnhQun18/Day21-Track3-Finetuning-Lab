@@ -1,6 +1,9 @@
 # Lab 21 - Báo cáo đánh giá fine-tuning bằng LoRA
 
-Ngày thực hiện: 07/10/2026. Hình thức nộp: Option B, GitHub + Hugging Face Hub. Họ tên và MSSV được để ngoài bản báo cáo kỹ thuật theo yêu cầu của người thực hiện.
+Ngày thực hiện: 07/10/2026. Hình thức nộp: Option B, GitHub + Hugging Face Hub. 
+
+Họ tên: **Trần Anh Quân**  
+Mã học viên: **2A202602598**.
 
 ## 1. Setup và quyết định trước thí nghiệm
 
@@ -112,7 +115,7 @@ Nếu có thêm hai giờ, tôi sẽ thiết kế trước một thử nghiệm 
 ## 8. Option B và khả năng tái lập
 
 - GitHub: https://github.com/AnhQun18/Day21-Track3-Finetuning-Lab
-- Hugging Face adapter: Chưa upload; cần đăng nhập Hugging Face và chọn repository.
+- Hugging Face adapter: https://huggingface.co/QunAnh/Lab21-LoRA-CSKH
 - Các file results, report, code và LINKS.md cần có trong repository nộp; adapter correct đặt trên Hub công khai.
 - NB6, custom dataset, reasoning-trace ablation và rank sweep chưa thực hiện; không khai bonus tương ứng.
 
