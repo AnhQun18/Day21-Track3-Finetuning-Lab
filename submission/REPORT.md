@@ -106,9 +106,9 @@ Quyết định triển khai phải xuất phát từ mục tiêu sử dụng. V
 
 ### Ba điều tôi học được từ số đo
 
-1. Tôi cần phân biệt tối ưu train với năng lực tác vụ: correct loss=0.626, target=0.97; attn_only loss=0.5378, target=0.97. Chọn adapter theo loss thay vì target sẽ bỏ qua câu hỏi mà lab cần trả lời.
-2. Mask phải được chứng minh bằng token labels: supervised_fraction=0.4149 và hai assert đúng là bằng chứng cụ thể, trong khi assistant_only_loss chỉ là một cờ có thể phụ thuộc chat template.
-3. Một kết quả target tốt chưa đủ để triển khai: delta target=+0.2050 cần được đối chiếu delta regression=-0.3133 và latency thay đổi +50.9%. Chạy smoke 8 mẫu không bảo đảm kết luận giữ nguyên ở 50/15 mẫu FULL.
+1. Loss giảm không đồng nghĩa model tốt hơn. Trong thí nghiệm, attn_only có train loss 0.5378, thấp hơn correct là 0.626, nhưng cả hai đều đạt target score 0.97
+2. kiểm tra loss mask là bước bắt buộc để đảm bảo mô hình chỉ học phần câu trả lời mong muốn.
+3. fine-tuning có thể cải thiện mạnh tác vụ chuyên biệt nhưng đồng thời làm giảm khả năng tổng quát của model, vì vậy cần đánh giá nhiều tiêu chí trước khi triển khai.
 
 Nếu có thêm hai giờ, tôi sẽ thiết kế trước một thử nghiệm replay 1-5% dữ liệu phổ thông trên train, giữ nguyên eval cũ làm mốc và thêm một tập đánh giá mới độc lập. Tôi cũng sẽ đo nhiều seed và sai số quanh target thay vì chỉ so một con số duy nhất; không chỉnh criterion để cứu verdict.
 
